@@ -1,0 +1,42 @@
+.nav-bar{
+    margin: auto;
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+
+
+    > .logo{
+        font-size: 1.5rem;
+        color: rgb(54, 54, 229);
+    }
+   > .nav-links{
+        display: flex;
+
+        gap: 20px;
+
+
+        > a {
+            text-decoration: none;
+            color: rgb(47, 47, 194);
+            font-size: 1.5rem;
+        }
+
+        > a:hover{
+            color: whitesmoke;
+        }
+
+    }
+}
+
+
+
+@media screen and (max-width: 850px) {
+    .logo {
+     display: none;
+    }
+
+    .nav-bar{
+        justify-content: center;
+    }
+  }

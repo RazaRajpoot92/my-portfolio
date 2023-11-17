@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Flex', sans-serif;
+}
+$bg-color: rgb(80, 168, 231);
+
+
+
+
+
+.btn{
+    margin-top: 10px;
+    width: 150px;
+    height: 50px;
+    font-size: 1.1rem;
+    color: whitesmoke;
+    background-color: rgb(40, 40, 225);
+    border: 2px solid rgb(102, 102, 202);
+    filter: drop-shadow(6px 6px 2rem rgb(107, 107, 192) );
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+
+}
+.btn:hover{
+    background-color: rgba(40, 40, 225, 0);
+    cursor: pointer;
+}
+
+.btn-sec{
+    margin-top: 10px;
+    width: 150px;
+    height: 50px;
+    font-size: 1.1rem;
+    color: rgb(237, 233, 233);
+    background-color: rgb(40, 40, 225);
+    border: 2px solid rgb(102, 102, 202);
+
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+
+}
+.btn-sec:hover{
+    background-color: rgba(40, 40, 225, 0);
+    color: rgb(29, 27, 27);
+    cursor: pointer;
+}
+
+.bg{
+    width: 100%;
+    height: 100vh;
+    background-color: $bg-color;
+    padding: 10px;
+
+
+
+
+    > .container{
+        width: 90%;
+        height: 100%;
+        margin: auto;
+
+    }
+
+}
+
+
+.container{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+
+    > .content{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        > .logo{
+            align-self: flex-start;
+        }
+
+
+        > h1{
+            font-size: 4rem;
+            color: rgb(36, 36, 224);
+            font-weight: 130%;
+            filter: drop-shadow(0 0 1.5rem rgb(124, 124, 205) );
+        }
+
+        > h3{
+            font-size: 1.5rem;
+        }
+
+        > p{
+            color: rgb(28, 27, 27);
+        }
+
+
+    }
+
+
+    > .pro-img{
+        width: 40%;
+        display: flex;
+        justify-content: center;
+
+
+        > img{
+
+            border-radius: 50%;
+            width: 350px;
+            border: 10px solid rgb(81, 104, 219);
+            animation: movepic 1s linear infinite alternate ;
+            animation-delay: 1s;
+            transition: 0.3s ease-in-out;
+
+
+        }
+
+        > img:hover{
+            filter: drop-shadow(0 0 3rem rgb(80, 99, 194));
+        }
+
+
+    }
+
+}
+
+
+
+
+
+
+
+.about-con{
+    width: 100%;
+    padding-bottom: 20px;
+    min-height: 400px;
+    background-color: rgb(239, 235, 235);
+    .con{
+        width: 90%;
+        margin:auto;
+    > .about-content{
+        text-align: center;
+        padding-top: 20px;
+
+        >h1{
+            font-size: 3rem;
+        }
+        > p{
+            text-align: center;
+            font-size: 1.1rem;
+            color: rgb(130, 128, 128);
+        }
+        > .line{
+            width: 100px;
+            height: 2px;
+            margin: 15px auto;
+            background-color: rgb(52, 52, 193);
+        }
+    }
+
+    .prof-con{
+        display: flex;
+        justify-content: space-between;
+
+
+    .prof-detail{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+
+        > h1{
+            color: rgb(46, 46, 219);
+            font-size: 2.5rem;
+
+        }
+        >p{
+            color: rgb(48, 47, 47);
+            font-size: 1.2rem;
+        }
+        > h3{
+            font-size: 1.2rem;
+
+            >span{
+                color: rgb(46, 46, 219);
+            }
+        }
+    }
+
+    > .web-img{
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+
+        > img{
+            width: 400px;
+            border-radius: 20px;
+
+            animation: movepic 1s linear infinite alternate ;
+
+        }
+    }
+
+
+}
+
+}
+}
+
+
+@keyframes movepic {
+    to{
+        transform: translateY(-10px);
+    }
+}
+
+@media screen and (max-width: 850px) {
+
+    .container{
+
+        flex-direction: column;
+        gap: 5%;
+
+
+        .content{
+
+            > h1{
+                font-size: 2rem;
+
+            }
+            > h3{
+               font-size: 1.5rem;
+            }
+
+
+        }
+
+
+
+        > .pro-img{
+
+            > img{
+                width: 250px;
+                border: 5px solid rgb(77, 102, 226);
+            }
+        }
+    }
+
+    .prof-con{
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+
+       > .prof-detail{
+            width: 100%;
+
+
+
+        }
+
+        > .web-img{
+            display: none;
+
+            > img{
+                display: none;
+            }
+        }
+
+    }
+
+
+
+  }
